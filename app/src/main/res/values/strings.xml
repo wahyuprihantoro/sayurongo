@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SAYUR on GO</string>
+    <string name="drawer_open">OPEN</string>
+    <string name="drawer_close">CLOSE</string>
+    <string-array name="role_array">
+        <item>Pembeli</item>
+        <item>Penjual</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+</resources>
