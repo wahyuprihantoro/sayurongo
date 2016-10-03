@@ -53,6 +53,9 @@
             android:name=".RegisterActivity_"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
+            android:name=".ChooseLanguageActivity_"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
         android:name=".KonfirmasiActivity_"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".SplashScreen_">

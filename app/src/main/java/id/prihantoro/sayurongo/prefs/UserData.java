@@ -14,10 +14,23 @@ public class UserData {
     public static final int UNKNOWN = 0;
     public static final String SHAREDPFREF = "asdjhsabdkjasmdasd";
     public static final String ROLE = "role";
+    public static final String FIRST_LOGIN = "first_login";
 
 
 //    @Pref
 //    UserPrefs_ userPrefs;
+
+    public boolean firstLogin(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPFREF, Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean(FIRST_LOGIN, false);
+    }
+
+    public void setFirstLogin(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPFREF, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(FIRST_LOGIN, true);
+        editor.commit();
+    }
 
     public boolean isBuyer(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPFREF, Context.MODE_PRIVATE);
