@@ -6,9 +6,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -26,6 +29,17 @@ public class PengaturanActivity extends AppCompatActivity implements FragmentDra
     UserData userData = new UserData();
     @Bean
     DrawerNavigator navigator;
+    @ViewById
+    RelativeLayout bahasa;
+    @ViewById
+    RelativeLayout english;
+    @ViewById
+    RelativeLayout indonesia;
+    @ViewById
+    ImageView cek_english;
+    @ViewById
+    ImageView cek_indonesia;
+
 
     private FragmentDrawer drawerFragment;
 
@@ -38,6 +52,29 @@ public class PengaturanActivity extends AppCompatActivity implements FragmentDra
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
         drawerFragment.setDrawerListener(this);
+    }
+
+    @Click
+    public void bahasa(){
+        english.setVisibility(View.VISIBLE);
+        indonesia.setVisibility(View.VISIBLE);
+        bahasa.setVisibility(View.INVISIBLE);
+    }
+
+    @Click
+    public void english(){
+        english.setBackgroundColor(getResources().getColor(R.color.hijau_pengaturan));
+        cek_english.setVisibility(View.VISIBLE);
+        indonesia.setBackgroundColor(getResources().getColor(R.color.putih_pengaturan));
+        cek_indonesia.setVisibility(View.INVISIBLE);
+    }
+
+    @Click
+    public void indonesia(){
+        indonesia.setBackgroundColor(getResources().getColor(R.color.hijau_pengaturan));
+        cek_indonesia.setVisibility(View.VISIBLE);
+        english.setBackgroundColor(getResources().getColor(R.color.putih_pengaturan));
+        cek_english.setVisibility(View.GONE);
     }
 
     @Override

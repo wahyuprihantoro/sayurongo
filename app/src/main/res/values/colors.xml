@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="hijau_background">#f0ffd9</color>
+    <color name="hijau_pengaturan">#e9f0d7</color>
+    <color name="putih_pengaturan">#fff</color>
 </resources>

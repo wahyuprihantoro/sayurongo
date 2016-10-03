@@ -21,6 +21,118 @@
                 layout="@layout/toolbar" />
         </LinearLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f7f7f7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#c6c6c6"
+                    android:gravity="center_horizontal"
+                    android:padding="15dp"
+                    android:text="FAQ"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:id="@+id/ask1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bagaimana cara melakukan pembelian?"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="walawala walawala walawala walawala walawala walawala walawala walawala walawala walawala "
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/ask2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bagaimana cara mendaftar?"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="walawala walawala walawala walawala walawala walawala walawala walawala walawala walawala "
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/ask3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bagaimana cara mengubah profil?"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="walawala walawala walawala walawala walawala walawala walawala walawala walawala walawala "
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#c6c6c6"
+                    android:gravity="center_horizontal"
+                    android:padding="15dp"
+                    android:text="Masukan Pertanyaan Lain"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="#aed581"
+                    android:text="Submit" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
     </LinearLayout>
 
 
