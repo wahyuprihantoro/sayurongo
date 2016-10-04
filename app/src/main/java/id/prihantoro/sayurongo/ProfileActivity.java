@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
@@ -60,7 +61,14 @@ public class ProfileActivity extends AppCompatActivity {
 
     @Click
     public void lanjutkan() {
-        KonfirmasiActivity_.intent(this).start();
+        if (UserData.getInstance().isBuyer(this)){
+            KonfirmasiActivity_.intent(this).start();
+        } else if (UserData.getInstance().isSeller(this)){
+            Toast.makeText(this, "seller tidak bisa beli", Toast.LENGTH_SHORT).show();
+        } else {
+            LoginActivity_.intent(this).start();
+            finish();
+        }
     }
 
 

@@ -40,11 +40,11 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@drawable/pp" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:src="@mipmap/ic_star_yellow" />
@@ -142,6 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
                         android:layout_marginTop="10dp"
                         android:background="#8bc34a"
                         android:text="LANJUTKAN"

@@ -10,11 +10,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:icon="@drawable/logo_transparan"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name="android.support.multidex.MultiDexApplication"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity_"
@@ -55,11 +55,10 @@
         <activity
             android:name=".ChooseLanguageActivity_"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".ForgetPasswordActivity_"/>
-        <activity
-        android:name=".KonfirmasiActivity_"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".ForgetPasswordActivity_" />
+        <activity android:name=".SuccessTransactionActivity_" />
+        <activity android:name=".RateSellerActivity_" />
+        <activity android:name=".KonfirmasiActivity_" />
         <activity android:name=".SplashScreen_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
