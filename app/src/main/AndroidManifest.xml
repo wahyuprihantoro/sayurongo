@@ -56,6 +56,8 @@
             android:name=".ChooseLanguageActivity_"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
+            android:name=".ForgetPasswordActivity_"/>
+        <activity
         android:name=".KonfirmasiActivity_"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".SplashScreen_">
