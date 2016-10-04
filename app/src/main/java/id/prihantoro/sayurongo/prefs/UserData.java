@@ -16,9 +16,15 @@ public class UserData {
     public static final String ROLE = "role";
     public static final String FIRST_LOGIN = "first_login";
 
+    private static UserData instance;
 
-//    @Pref
-//    UserPrefs_ userPrefs;
+    public static UserData getInstance() {
+        if (instance == null) {
+            instance = new UserData();
+        }
+        return instance;
+    }
+
 
     public boolean firstLogin(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPFREF, Context.MODE_PRIVATE);
