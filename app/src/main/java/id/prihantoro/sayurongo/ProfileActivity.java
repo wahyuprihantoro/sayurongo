@@ -43,10 +43,6 @@ public class ProfileActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("PROFILE");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
-//        drawerFragment = (FragmentDrawer)
-//                getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
-//        drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
-//        drawerFragment.setDrawerListener(this);
 
         DaganganItem item = new DaganganItem("Wortel", "tersisa 5 kg", "20000/kg");
         linearLayout.addView(DaganganItemView_.build(this, item));
@@ -72,7 +68,6 @@ public class ProfileActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == android.R.id.home) {
             finish();
         }
@@ -80,8 +75,4 @@ public class ProfileActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//    @Override
-//    public void onDrawerItemSelected(View view, int position) {
-//        navigator.setupNavigation(position);
-//    }
 }
