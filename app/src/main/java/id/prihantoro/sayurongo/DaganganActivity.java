@@ -6,13 +6,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import id.prihantoro.sayurongo.fragment.FragmentDrawer;
+import id.prihantoro.sayurongo.fragment.TambahDaganganFragment;
+import id.prihantoro.sayurongo.fragment.TambahDaganganFragment_;
 import id.prihantoro.sayurongo.prefs.UserData;
 import id.prihantoro.sayurongo.utils.DrawerNavigator;
 
@@ -26,6 +30,9 @@ public class DaganganActivity extends AppCompatActivity implements FragmentDrawe
     UserData userData = new UserData();
     @Bean
     DrawerNavigator navigator;
+
+    @ViewById
+    Button tambahDagangan;
 
     private FragmentDrawer drawerFragment;
 
@@ -65,5 +72,11 @@ public class DaganganActivity extends AppCompatActivity implements FragmentDrawe
     @Override
     public void onDrawerItemSelected(View view, int position) {
         navigator.setupNavigation(position);
+    }
+
+    @Click
+    void tambahDagangan() {
+        TambahDaganganFragment fragment = TambahDaganganFragment_.builder().build();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragment).addToBackStack("tambah_dagangan").commit();
     }
 }

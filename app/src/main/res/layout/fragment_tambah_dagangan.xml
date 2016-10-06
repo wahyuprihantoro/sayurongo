@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:background="@android:color/background_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/jenisDaganganLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<include layout="@layout/toolbar"/>-->
+
+            <RelativeLayout
+                android:id="@+id/sayuran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DCEDC8"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Sayuran"
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_rightarrow_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/buahBuahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF9C4"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Buah - buahan"
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_rightarrow_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/makananLaut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#BBDEFB"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Makanan laut"
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_rightarrow_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/daging"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F8BBD0"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Daging"
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_rightarrow_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/makananOlahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#CFD8DC"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Makanan olahan"
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_rightarrow_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bumbuMasak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D7CCC8"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Bumbu masak"
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_rightarrow_grey" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
