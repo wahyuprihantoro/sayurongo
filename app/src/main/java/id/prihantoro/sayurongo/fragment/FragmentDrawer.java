@@ -1,6 +1,7 @@
 package id.prihantoro.sayurongo.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
@@ -13,10 +14,13 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import id.prihantoro.sayurongo.EditProfileActivity_;
 import id.prihantoro.sayurongo.R;
 import id.prihantoro.sayurongo.adapter.NavigationDrawerAdapter;
 import id.prihantoro.sayurongo.model.NavDrawerItem;
@@ -30,13 +34,15 @@ public class FragmentDrawer extends Fragment {
 
     private static String TAG = FragmentDrawer.class.getSimpleName();
     private static String[] titles = null;
-    UserData userData =  new UserData();
+    UserData userData = new UserData();
     private RecyclerView recyclerView;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
     private NavigationDrawerAdapter adapter;
     private View containerView;
     private FragmentDrawerListener drawerListener;
+    private LinearLayout photoLayout;
+    private ImageView editProfileButton;
 
     public FragmentDrawer() {
 
@@ -59,7 +65,7 @@ public class FragmentDrawer extends Fragment {
             data.add(new NavDrawerItem(R.mipmap.ic_setup_black, "Pengaturan"));
         } else if (userData.isBuyer(getContext())) {
             data.add(new NavDrawerItem(true));
-            data.add(new NavDrawerItem(R.mipmap.ic_search_white, "Telusuri"));
+            data.add(new NavDrawerItem(R.drawable.ic_action_search, "Telusuri"));
             data.add(new NavDrawerItem(R.mipmap.ic_clock_black, "Riwayat"));
             data.add(new NavDrawerItem(true));
             data.add(new NavDrawerItem(R.mipmap.ic_help_black, "Bantuan"));
@@ -68,7 +74,7 @@ public class FragmentDrawer extends Fragment {
             data.add(new NavDrawerItem(R.mipmap.ic_signout_black, "Keluar"));
         } else {
             data.add(new NavDrawerItem(true));
-            data.add(new NavDrawerItem(R.mipmap.ic_search_white, "Telusuri"));
+            data.add(new NavDrawerItem(R.drawable.ic_action_search, "Telusuri"));
             data.add(new NavDrawerItem(R.mipmap.ic_bag_black, "Pesanan"));
             data.add(new NavDrawerItem(R.mipmap.ic_cart_black, "Dagangan"));
             data.add(new NavDrawerItem(R.mipmap.ic_clock_black, "Riwayat"));
@@ -100,7 +106,19 @@ public class FragmentDrawer extends Fragment {
         // Inflating view layout
         View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         recyclerView = (RecyclerView) layout.findViewById(R.id.drawerList);
-
+        photoLayout = (LinearLayout) layout.findViewById(R.id.photoLayout);
+        if (UserData.getInstance().unKnownRole(getContext())) {
+            photoLayout.setVisibility(View.GONE);
+        } else {
+            photoLayout.setVisibility(View.VISIBLE);
+        }
+        editProfileButton = (ImageView) layout.findViewById(R.id.editProfileButton);
+        editProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditProfileActivity_.intent(getContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
+            }
+        });
         adapter = new NavigationDrawerAdapter(getActivity(), getData());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
