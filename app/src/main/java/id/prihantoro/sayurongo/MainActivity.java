@@ -94,6 +94,12 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         for (int i = 0; i < locations.size(); i++) {
             mMap.addMarker(new MarkerOptions().position(locations.get(i)).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_userlocation_green)));
         }
+        if (UserData.getInstance().isSeller(this)) {
+            locations = getSellerLocations();
+            for (int i = 0; i < locations.size(); i++) {
+                mMap.addMarker(new MarkerOptions().position(locations.get(i)).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_userlocation_pink)));
+            }
+        }
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(current, 16));
 
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
@@ -116,6 +122,21 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         locations.add(new LatLng(-6.400886, 106.793381));
         locations.add(new LatLng(-6.404710, 106.793816));
         locations.add(new LatLng(-6.399891, 106.793838));
+
+        return locations;
+    }
+
+    public List<LatLng> getSellerLocations() {
+        List<LatLng> locations = new ArrayList<>();
+        locations.add(new LatLng(-6.401826, 106.793982));
+        locations.add(new LatLng(-6.404283, 106.792520));
+        locations.add(new LatLng(-6.401536, 106.793087));
+        locations.add(new LatLng(-6.401519, 106.792480));
+        locations.add(new LatLng(-6.404739, 106.791246));
+        locations.add(new LatLng(-6.400886, 106.794381));
+        locations.add(new LatLng(-6.401710, 106.792816));
+        locations.add(new LatLng(-6.398891, 106.794838));
+
         return locations;
     }
 
