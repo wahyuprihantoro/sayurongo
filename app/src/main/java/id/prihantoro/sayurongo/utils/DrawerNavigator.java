@@ -9,6 +9,7 @@ import org.androidannotations.annotations.RootContext;
 import id.prihantoro.sayurongo.BantuanActivity_;
 import id.prihantoro.sayurongo.DaganganActivity_;
 import id.prihantoro.sayurongo.LoginActivity_;
+import id.prihantoro.sayurongo.MainActivity_;
 import id.prihantoro.sayurongo.PengaturanActivity_;
 import id.prihantoro.sayurongo.PesananActivity_;
 import id.prihantoro.sayurongo.RateAppActivity_;
@@ -31,7 +32,7 @@ public class DrawerNavigator {
         boolean finish = true;
         if (userData.isBuyer(context)) {
             if (pos == 1) {
-                TelusuriActivity_.intent(context).start();
+                MainActivity_.intent(context).start();
             } else if (pos == 2) {
                 RiwayatActivity_.intent(context).start();
             } else if (pos == 4) {
@@ -46,7 +47,7 @@ public class DrawerNavigator {
             }
         } else if (userData.isSeller(context)) {
             if (pos == 1) {
-                TelusuriActivity_.intent(context).start();
+                MainActivity_.intent(context).start();
             } else if (pos == 2) {
                 PesananActivity_.intent(context).start();
             } else if (pos == 3) {
