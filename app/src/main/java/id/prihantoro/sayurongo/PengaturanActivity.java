@@ -58,7 +58,7 @@ public class PengaturanActivity extends AppCompatActivity implements FragmentDra
     public void bahasa(){
         english.setVisibility(View.VISIBLE);
         indonesia.setVisibility(View.VISIBLE);
-        bahasa.setVisibility(View.INVISIBLE);
+        bahasa.setVisibility(View.GONE);
     }
 
     @Click
