@@ -1,5 +1,6 @@
 package id.prihantoro.sayurongo;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -76,7 +77,6 @@ public class DaganganActivity extends AppCompatActivity implements FragmentDrawe
 
     @Click
     void tambahDagangan() {
-        TambahDaganganFragment fragment = TambahDaganganFragment_.builder().build();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragment).addToBackStack("tambah_dagangan").commit();
+        TambahDaganganActivity_.intent(getApplicationContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
     }
 }
