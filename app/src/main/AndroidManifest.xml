@@ -59,6 +59,7 @@
         <activity android:name=".SuccessTransactionActivity_" />
         <activity android:name=".RateSellerActivity_" />
         <activity android:name=".TambahDaganganActivity_" />
+        <activity android:name=".DetailRiwayatActivity_" />
         <activity android:name=".KonfirmasiActivity_" />
         <activity android:name=".SplashScreen_">
             <intent-filter>

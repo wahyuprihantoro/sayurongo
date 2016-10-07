@@ -1,5 +1,6 @@
 package id.prihantoro.sayurongo;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +10,7 @@ import android.view.View;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -60,6 +62,11 @@ public class RiwayatActivity extends AppCompatActivity implements FragmentDrawer
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Click
+    void history1(){
+        DetailRiwayatActivity_.intent(this).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
     }
 
     @Override
