@@ -43,6 +43,7 @@ public class FragmentDrawer extends Fragment {
     private FragmentDrawerListener drawerListener;
     private LinearLayout photoLayout;
     private ImageView editProfileButton;
+    private ImageView pp;
 
     public FragmentDrawer() {
 
@@ -113,7 +114,14 @@ public class FragmentDrawer extends Fragment {
             photoLayout.setVisibility(View.VISIBLE);
         }
         editProfileButton = (ImageView) layout.findViewById(R.id.editProfileButton);
+        pp = (ImageView) layout.findViewById(R.id.pp);
         editProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditProfileActivity_.intent(getContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
+            }
+        });
+        pp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditProfileActivity_.intent(getContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
