@@ -92,12 +92,12 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         List<LatLng> locations = new ArrayList<>();
         locations = getLocations();
         for (int i = 0; i < locations.size(); i++) {
-            mMap.addMarker(new MarkerOptions().position(locations.get(i)).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_userlocation_green)));
+            mMap.addMarker(new MarkerOptions().title("buyer").position(locations.get(i)).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_userlocation_green)));
         }
         if (UserData.getInstance().isSeller(this)) {
             locations = getSellerLocations();
             for (int i = 0; i < locations.size(); i++) {
-                mMap.addMarker(new MarkerOptions().position(locations.get(i)).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_userlocation_pink)));
+                mMap.addMarker(new MarkerOptions().title("seller").position(locations.get(i)).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_userlocation_pink)));
             }
         }
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(current, 16));
@@ -105,8 +105,13 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                ProfileActivity_.intent(getApplicationContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).extra("lat", marker.getPosition().latitude).extra("lng", marker.getPosition().longitude)
-                        .extra("code", ProfileActivity.PROFIL_PENJUAL).start();
+                if (UserData.getInstance().isSeller(getApplicationContext()) && marker.getTitle().equals("seller")){
+
+                } else {
+                    ProfileActivity_.intent(getApplicationContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).extra("lat", marker.getPosition().latitude).extra("lng", marker.getPosition().longitude)
+                            .extra("code", ProfileActivity.PROFIL_PENJUAL).start();
+                }
+
                 return false;
             }
         });
