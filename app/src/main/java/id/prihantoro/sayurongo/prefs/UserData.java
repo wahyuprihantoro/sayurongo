@@ -58,6 +58,7 @@ public class UserData {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.commit();
+        setFirstLogin(context);
     }
 
     public void setRole(Context context, int role) {

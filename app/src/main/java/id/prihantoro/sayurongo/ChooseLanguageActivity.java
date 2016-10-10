@@ -19,11 +19,13 @@ public class ChooseLanguageActivity extends AppCompatActivity {
     public void english() {
         userData.setFirstLogin(getApplicationContext());
         MainActivity_.intent(getApplicationContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
+        finish();
     }
 
     @Click
     public void indonesia() {
         userData.setFirstLogin(getApplicationContext());
         MainActivity_.intent(getApplicationContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
+        finish();
     }
 }
