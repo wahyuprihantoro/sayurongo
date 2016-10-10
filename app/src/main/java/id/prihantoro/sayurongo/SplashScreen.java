@@ -29,6 +29,7 @@ public class SplashScreen extends AppCompatActivity {
                     MainActivity_.intent(getApplicationContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
                 } else {
                     ChooseLanguageActivity_.intent(getApplicationContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
+                    userData.setFirstLogin(getApplicationContext());
                 }
                 finish();
             }
