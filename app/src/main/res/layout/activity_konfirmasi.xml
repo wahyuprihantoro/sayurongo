@@ -125,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="*biaya antar 10% dari total belanja\n*min pembelian 10000 untuk diantar" />
+        android:text="*min pembelian 10000 untuk diantar" />
 
     <RelativeLayout
         android:layout_width="match_parent"
