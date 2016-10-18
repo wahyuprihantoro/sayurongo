@@ -10,8 +10,7 @@ import com.orm.SugarRecord;
  */
 public class User extends SugarRecord {
     public String name;
-    public LatLng latLng;
-    public Bitmap photo;
+    public String photo;
     public String phone;
     public boolean isSeller;
     public String password;
@@ -19,9 +18,8 @@ public class User extends SugarRecord {
     public User() {
     }
 
-    public User(String name, LatLng latLng, Bitmap photo, String phone, boolean isSeller, String password) {
+    public User(String name, String photo, String phone, boolean isSeller, String password) {
         this.name = name;
-        this.latLng = latLng;
         this.photo = photo;
         this.phone = phone;
         this.isSeller = isSeller;

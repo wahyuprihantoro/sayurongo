@@ -2,6 +2,8 @@ package id.prihantoro.sayurongo.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
@@ -9,6 +11,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -16,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +29,7 @@ import id.prihantoro.sayurongo.EditProfileActivity_;
 import id.prihantoro.sayurongo.R;
 import id.prihantoro.sayurongo.adapter.NavigationDrawerAdapter;
 import id.prihantoro.sayurongo.model.NavDrawerItem;
+import id.prihantoro.sayurongo.model.User;
 import id.prihantoro.sayurongo.prefs.UserData;
 
 /**
@@ -44,9 +50,15 @@ public class FragmentDrawer extends Fragment {
     private LinearLayout photoLayout;
     private ImageView editProfileButton;
     private ImageView pp;
+    private TextView nama;
 
     public FragmentDrawer() {
 
+    }
+
+    public static Bitmap decodeBase64(String input) {
+        byte[] decodedBytes = Base64.decode(input, 0);
+        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
     }
 
     public void setDrawerListener(FragmentDrawerListener listener) {
@@ -115,6 +127,7 @@ public class FragmentDrawer extends Fragment {
         }
         editProfileButton = (ImageView) layout.findViewById(R.id.editProfileButton);
         pp = (ImageView) layout.findViewById(R.id.pp);
+        nama = (TextView) layout.findViewById(R.id.nama);
         editProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,6 +140,18 @@ public class FragmentDrawer extends Fragment {
                 EditProfileActivity_.intent(getContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
             }
         });
+
+
+        long id = UserData.getInstance().getId(getContext());
+        if (id != -1) {
+            User user = User.findById(User.class, id);
+            nama.setText(user.name);
+            if (user.photo != null) {
+                pp.setImageBitmap(decodeBase64(user.photo));
+                Log.d("wahyu", user.photo);
+            }
+        }
+
         adapter = new NavigationDrawerAdapter(getActivity(), getData());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

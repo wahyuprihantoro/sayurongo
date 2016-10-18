@@ -7,6 +7,7 @@ import android.provider.MediaStore;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,6 +26,7 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
@@ -57,6 +59,7 @@ public class RegisterActivity extends AppCompatActivity implements FragmentDrawe
     CircleImageView image;
 
     private Bitmap currentBitmap;
+    private String currentPhotoBase64;
     private FragmentDrawer drawerFragment;
 
     @AfterViews
@@ -84,10 +87,10 @@ public class RegisterActivity extends AppCompatActivity implements FragmentDrawe
         String password = this.password.getText().toString();
         User user;
         if (spinner.getSelectedItem().toString().equals("Pembeli")) {
-            user = new User(nama, null, currentBitmap, phone, false, password);
+            user = new User(nama, currentPhotoBase64, phone, false, password);
             userData.setRole(getApplicationContext(), UserData.BUYER);
         } else {
-            user = new User(nama, null, currentBitmap, phone, true, password);
+            user = new User(nama, currentPhotoBase64, phone, true, password);
             userData.setRole(getApplicationContext(), UserData.SELLER);
         }
         long id = user.save();
@@ -120,6 +123,10 @@ public class RegisterActivity extends AppCompatActivity implements FragmentDrawe
                     Bitmap imageBitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), resultUri);
                     currentBitmap = imageBitmap;
                     image.setImageBitmap(imageBitmap);
+                    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                    imageBitmap.compress(Bitmap.CompressFormat.JPEG, 50, byteArrayOutputStream);
+                    byte[] byteArray = byteArrayOutputStream.toByteArray();
+                    currentPhotoBase64 = Base64.encodeToString(byteArray, Base64.NO_WRAP);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
