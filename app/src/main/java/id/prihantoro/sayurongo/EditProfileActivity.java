@@ -86,7 +86,9 @@ public class EditProfileActivity extends AppCompatActivity {
             name.setText(user.name);
             phone.setText(user.phone);
             password.setText(user.password);
-            image.setImageBitmap(decodeBase64(user.photo));
+            if (user.photo != null && !user.photo.isEmpty()) {
+                image.setImageBitmap(decodeBase64(user.photo));
+            }
         }
     }
 
