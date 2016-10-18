@@ -3,6 +3,8 @@ package id.prihantoro.sayurongo;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -35,6 +37,8 @@ public class ProfileActivity extends AppCompatActivity {
     LinearLayout linearLayout;
     @Extra
     int code;
+    @ViewById
+    Button lanjutkan;
 
     private FragmentDrawer drawerFragment;
 
@@ -57,6 +61,9 @@ public class ProfileActivity extends AppCompatActivity {
         linearLayout.addView(DaganganItemView_.build(this, item));
         item = new DaganganItem("Jahe", "tersisa 5 kg", "7000/kg");
         linearLayout.addView(DaganganItemView_.build(this, item));
+        if (UserData.getInstance().isSeller(this)){
+            lanjutkan.setVisibility(View.GONE);
+        }
     }
 
     @Click
@@ -66,6 +73,7 @@ public class ProfileActivity extends AppCompatActivity {
         } else if (UserData.getInstance().isSeller(this)){
             Toast.makeText(this, "seller tidak bisa beli", Toast.LENGTH_SHORT).show();
         } else {
+            Toast.makeText(this, "anda harus login terlebih dahulu", Toast.LENGTH_SHORT).show();
             LoginActivity_.intent(this).start();
             finish();
         }
