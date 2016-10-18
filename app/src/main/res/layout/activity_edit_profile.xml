@@ -59,6 +59,7 @@
             android:layout_marginRight="18dp"
             android:layout_marginTop="8dp"
             android:hint="No. HP*"
+            android:inputType="number"
             android:text="085642710751" />
 
         <EditText
