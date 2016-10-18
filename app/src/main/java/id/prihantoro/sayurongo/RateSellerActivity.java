@@ -42,11 +42,13 @@ public class RateSellerActivity extends AppCompatActivity {
     void like(){
         up.setVisibility(View.VISIBLE);
         down.setVisibility(View.GONE);
+        finish();
     }
 
     @Click
     void dislike(){
         down.setVisibility(View.VISIBLE);
         up.setVisibility(View.GONE);
+        finish();
     }
 }
