@@ -6,10 +6,15 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
+import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+
+import java.util.Calendar;
 
 import id.prihantoro.sayurongo.custom.InvoiceItemView_;
 import id.prihantoro.sayurongo.model.InvoiceItem;
@@ -18,7 +23,7 @@ import id.prihantoro.sayurongo.model.InvoiceItem;
  * Created by Wahyu Prihantoro on 20-Sep-16.
  */
 @EActivity(R.layout.activity_konfirmasi)
-public class KonfirmasiActivity extends AppCompatActivity {
+public class KonfirmasiActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     @ViewById
     TextView total;
     @ViewById
@@ -27,12 +32,15 @@ public class KonfirmasiActivity extends AppCompatActivity {
     CheckBox langsung;
     @ViewById
     LinearLayout linearLayout;
+    @ViewById
+    TextView clockValue;
 
     @AfterViews
     void init() {
         getSupportActionBar().setTitle("KONFIRMASI");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        String time = Calendar.HOUR_OF_DAY+ ":" + Calendar.MINUTE + ":" + Calendar.SECOND;
+        clockValue.setText(time);
         int total = 0;
         InvoiceItem item = new InvoiceItem("Wortel", 20000, 3);
         total += item.harga * item.jumlah;
@@ -68,9 +76,28 @@ public class KonfirmasiActivity extends AppCompatActivity {
         diantar.setChecked(true);
         langsung.setChecked(false);
     }
+
     @Click
     void langsung() {
         diantar.setChecked(false);
         langsung.setChecked(true);
+    }
+
+    @Click
+    void clockLayout() {
+        Calendar now = Calendar.getInstance();
+        TimePickerDialog dpd = TimePickerDialog.newInstance(
+                KonfirmasiActivity.this,
+                now.get(Calendar.HOUR_OF_DAY),
+                now.get(Calendar.MINUTE),
+                true
+        );
+        dpd.show(getFragmentManager(), "Datepickerdialog");
+    }
+
+    @Override
+    public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute, int second) {
+        String time = hourOfDay + ":" + minute + ":" + second;
+        clockValue.setText(time);
     }
 }
