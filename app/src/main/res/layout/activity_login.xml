@@ -29,6 +29,7 @@
             android:src="@drawable/logo_transparan" />
 
         <EditText
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -36,6 +37,7 @@
             android:hint="Nama/No. HP" />
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"

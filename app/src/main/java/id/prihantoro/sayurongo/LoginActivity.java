@@ -6,6 +6,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
@@ -14,6 +16,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import id.prihantoro.sayurongo.fragment.FragmentDrawer;
+import id.prihantoro.sayurongo.model.User;
 import id.prihantoro.sayurongo.prefs.UserData;
 import id.prihantoro.sayurongo.utils.DrawerNavigator;
 
@@ -27,6 +30,10 @@ public class LoginActivity extends AppCompatActivity implements FragmentDrawer.F
     UserData userData = new UserData();
     @Bean
     DrawerNavigator navigator;
+    @ViewById
+    EditText name;
+    @ViewById
+    EditText password;
 
     private FragmentDrawer drawerFragment;
 
@@ -43,28 +50,37 @@ public class LoginActivity extends AppCompatActivity implements FragmentDrawer.F
 
     @Click
     public void login() {
-        userData.setRole(getApplicationContext(), UserData.BUYER);
-        MainActivity_.intent(this).start();
-        finish();
+        User user = User.getUserByName(name.getText().toString(), password.getText().toString());
+        if (user == null) {
+            user = User.getUserByPhone(name.getText().toString(), password.getText().toString());
+        }
+        if (user != null) {
+            UserData.getInstance().setId(this, user.getId());
+            if (user.isSeller) {
+                userData.setRole(getApplicationContext(), UserData.SELLER);
+            } else {
+                userData.setRole(getApplicationContext(), UserData.BUYER);
+            }
+            MainActivity_.intent(this).start();
+            finish();
+        } else {
+            Toast.makeText(this, "No. HP atau password anda salah", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Click
-    public void forgetPassword(){
+    public void forgetPassword() {
         ForgetPasswordActivity_.intent(this).start();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
