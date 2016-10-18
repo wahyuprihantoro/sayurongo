@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
-    android:background="@color/hijau_background"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#fff">
 
     <LinearLayout
-        android:background="@color/hijau_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#fff"
         android:orientation="vertical">
 
         <LinearLayout
@@ -29,6 +29,7 @@
             android:padding="16dp">
 
             <LinearLayout
+                android:layout_above="@+id/bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#f7f7f7"
@@ -66,7 +67,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="walawala walawala walawala walawala walawala walawala walawala walawala walawala walawala "
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper faucibus vestibulum. Duis felis lacus, bibendum ut ultricies sed, vehicula at elit. Integer cursus nulla eu ex pulvinar, vitae ultricies enim interdum."
                             android:textSize="15sp" />
 
                         <TextView
@@ -80,7 +81,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="walawala walawala walawala walawala walawala walawala walawala walawala walawala walawala "
+                            android:text="Curabitur sit amet convallis purus, ut ultrices turpis. Praesent dictum nulla eu odio bibendum, et tempor metus pretium. Maecenas blandit et est et efficitur. Cras nibh dolor, semper nec neque nec, hendrerit malesuada mauris. Praesent pellentesque vitae libero sit amet lobortis."
                             android:textSize="15sp" />
 
                         <TextView
@@ -94,7 +95,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="walawala walawala walawala walawala walawala walawala walawala walawala walawala walawala "
+                            android:text="Praesent maximus tellus at feugiat ultricies. Nullam suscipit urna nec egestas varius. In sapien ipsum, bibendum eget purus eu, euismod sodales purus."
                             android:textSize="15sp" />
                     </LinearLayout>
                 </ScrollView>
@@ -102,10 +103,11 @@
             </LinearLayout>
 
             <LinearLayout
-                android:background="@color/hijau_background"
+                android:id="@+id/bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:background="#fff"
                 android:orientation="vertical">
 
                 <TextView
