@@ -14,6 +14,7 @@ public class UserData {
     public static final int UNKNOWN = 0;
     public static final String SHAREDPFREF = "asdjhsabdkjasmdasd";
     public static final String ROLE = "role";
+    public static final String ID = "id";
     public static final String FIRST_LOGIN = "first_login";
 
     private static UserData instance;
@@ -68,4 +69,15 @@ public class UserData {
         editor.commit();
     }
 
+    public void setId(Context context, long id) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPFREF, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putLong(ID, id);
+        editor.commit();
+    }
+
+    public long getId(Context context){
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPFREF, Context.MODE_PRIVATE);
+        return sharedPreferences.getLong(ID, -1);
+    }
 }

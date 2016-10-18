@@ -1,5 +1,6 @@
 package id.prihantoro.sayurongo;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -7,7 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
@@ -16,6 +19,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import id.prihantoro.sayurongo.fragment.FragmentDrawer;
+import id.prihantoro.sayurongo.model.User;
 import id.prihantoro.sayurongo.prefs.UserData;
 import id.prihantoro.sayurongo.utils.DrawerNavigator;
 
@@ -31,6 +35,12 @@ public class RegisterActivity extends AppCompatActivity implements FragmentDrawe
     DrawerNavigator navigator;
     @ViewById
     Spinner spinner;
+    @ViewById
+    EditText nama;
+    @ViewById
+    EditText phone;
+    @ViewById
+    EditText password;
 
     private FragmentDrawer drawerFragment;
 
@@ -54,7 +64,21 @@ public class RegisterActivity extends AppCompatActivity implements FragmentDrawe
     @Click
     public void register() {
         MainActivity_.intent(this).start();
-        userData.setRole(getApplicationContext(), UserData.SELLER);
+        String nama = this.nama.getText().toString();
+        String phone = this.phone.getText().toString();
+        String password = this.password.getText().toString();
+        User user;
+        if (spinner.getSelectedItem().toString().equals("Pembeli")) {
+            user = new User(nama, null, null, phone, false, password);
+            userData.setRole(getApplicationContext(), UserData.BUYER);
+        } else {
+            user = new User(nama, null, null, phone, true, password);
+            userData.setRole(getApplicationContext(), UserData.SELLER);
+        }
+        long id = user.save();
+        Toast.makeText(this, "id: "+id, Toast.LENGTH_SHORT).show();
+        UserData.getInstance().setId(this, id);
+        MainActivity_.intent(this).flags(Intent.FLAG_ACTIVITY_NEW_TASK).start();
     }
 
     @Override
