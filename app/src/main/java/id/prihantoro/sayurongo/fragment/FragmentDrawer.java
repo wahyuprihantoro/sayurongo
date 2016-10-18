@@ -51,6 +51,7 @@ public class FragmentDrawer extends Fragment {
     private ImageView editProfileButton;
     private ImageView pp;
     private TextView nama;
+    private long id;
 
     public FragmentDrawer() {
 
@@ -142,7 +143,7 @@ public class FragmentDrawer extends Fragment {
         });
 
 
-        long id = UserData.getInstance().getId(getContext());
+        id = UserData.getInstance().getId(getContext());
         if (id != -1) {
             User user = User.findById(User.class, id);
             nama.setText(user.name);
@@ -203,6 +204,19 @@ public class FragmentDrawer extends Fragment {
             }
         });
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (id != -1) {
+            User user = User.findById(User.class, id);
+            nama.setText(user.name);
+            if (user.photo != null) {
+                pp.setImageBitmap(decodeBase64(user.photo));
+                Log.d("wahyu", user.photo);
+            }
+        }
     }
 
     public static interface ClickListener {
