@@ -38,10 +38,8 @@ public class DrawerNavigator {
             } else if (pos == 4) {
                 BantuanActivity_.intent(context).start();
             } else if (pos == 5) {
-                RateAppActivity_.intent(context).start();
-            } else if (pos == 6) {
                 PengaturanActivity_.intent(context).start();
-            } else if (pos == 7) {
+            } else if (pos == 6) {
                 LoginActivity_.intent(context).start();
                 userData.logout(context);
             }
@@ -57,10 +55,8 @@ public class DrawerNavigator {
             } else if (pos == 6) {
                 BantuanActivity_.intent(context).start();
             } else if (pos == 7) {
-                RateAppActivity_.intent(context).start();
-            } else if (pos == 8) {
                 PengaturanActivity_.intent(context).start();
-            } else if (pos == 9) {
+            } else if (pos == 8) {
                 LoginActivity_.intent(context).start();
                 userData.logout(context);
             }
@@ -72,8 +68,6 @@ public class DrawerNavigator {
             } else if (pos == 4) {
                 BantuanActivity_.intent(context).start();
             } else if (pos == 5) {
-                RateAppActivity_.intent(context).start();
-            } else if (pos == 6) {
                 PengaturanActivity_.intent(context).start();
             }
         }

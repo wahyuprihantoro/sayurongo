@@ -75,7 +75,7 @@ public class FragmentDrawer extends Fragment {
             data.add(new NavDrawerItem(R.mipmap.ic_signin_black, "Masuk"));
             data.add(new NavDrawerItem(true));
             data.add(new NavDrawerItem(R.mipmap.ic_help_black, "Bantuan"));
-            data.add(new NavDrawerItem(R.mipmap.ic_star_black, "Rate App"));
+//            data.add(new NavDrawerItem(R.mipmap.ic_star_black, "Rate App"));
             data.add(new NavDrawerItem(R.mipmap.ic_setup_black, "Pengaturan"));
         } else if (userData.isBuyer(getContext())) {
             data.add(new NavDrawerItem(true));
@@ -83,7 +83,7 @@ public class FragmentDrawer extends Fragment {
             data.add(new NavDrawerItem(R.mipmap.ic_clock_black, "Riwayat"));
             data.add(new NavDrawerItem(true));
             data.add(new NavDrawerItem(R.mipmap.ic_help_black, "Bantuan"));
-            data.add(new NavDrawerItem(R.mipmap.ic_star_black, "Rate App"));
+//            data.add(new NavDrawerItem(R.mipmap.ic_star_black, "Rate App"));
             data.add(new NavDrawerItem(R.mipmap.ic_setup_black, "Pengaturan"));
             data.add(new NavDrawerItem(R.mipmap.ic_signout_black, "Keluar"));
         } else {
@@ -94,7 +94,7 @@ public class FragmentDrawer extends Fragment {
             data.add(new NavDrawerItem(R.mipmap.ic_clock_black, "Riwayat"));
             data.add(new NavDrawerItem(true));
             data.add(new NavDrawerItem(R.mipmap.ic_help_black, "Bantuan"));
-            data.add(new NavDrawerItem(R.mipmap.ic_star_black, "Rate App"));
+//            data.add(new NavDrawerItem(R.mipmap.ic_star_black, "Rate App"));
             data.add(new NavDrawerItem(R.mipmap.ic_setup_black, "Pengaturan"));
             data.add(new NavDrawerItem(R.mipmap.ic_signout_black, "Keluar"));
         }
