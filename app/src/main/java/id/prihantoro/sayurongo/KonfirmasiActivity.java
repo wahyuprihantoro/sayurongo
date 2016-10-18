@@ -12,11 +12,14 @@ import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Extra;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.Calendar;
+import java.util.Date;
 
 import id.prihantoro.sayurongo.custom.InvoiceItemView_;
+import id.prihantoro.sayurongo.model.Invoice;
 import id.prihantoro.sayurongo.model.InvoiceItem;
 
 /**
@@ -34,26 +37,25 @@ public class KonfirmasiActivity extends AppCompatActivity implements TimePickerD
     LinearLayout linearLayout;
     @ViewById
     TextView clockValue;
+    @Extra
+    Invoice invoice;
 
     @AfterViews
     void init() {
         getSupportActionBar().setTitle("KONFIRMASI");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        String time = Calendar.HOUR_OF_DAY+ ":" + Calendar.MINUTE + ":" + Calendar.SECOND;
+        Calendar now = Calendar.getInstance();
+        String time = new Date().getHours() + ":" + new Date().getMinutes();
         clockValue.setText(time);
         int total = 0;
-        InvoiceItem item = new InvoiceItem("Wortel", 20000, 3);
-        total += item.harga * item.jumlah;
-        linearLayout.addView(InvoiceItemView_.build(this, item));
-        item = new InvoiceItem("Tomat", 30000, 2);
-        total += item.harga * item.jumlah;
-        linearLayout.addView(InvoiceItemView_.build(this, item));
-        item = new InvoiceItem("Jahe", 7000, 2);
-        total += item.harga * item.jumlah;
-        linearLayout.addView(InvoiceItemView_.build(this, item));
-        item = new InvoiceItem("Lengkuas", 5500, 1);
-        total += item.harga * item.jumlah;
-        linearLayout.addView(InvoiceItemView_.build(this, item));
+        if (invoice != null) {
+            for (InvoiceItem item : invoice.invoices) {
+                if (item.jumlah > 0) {
+                    total += item.harga * item.jumlah;
+                    linearLayout.addView(InvoiceItemView_.build(this, item));
+                }
+            }
+        }
         this.total.setText(total + "");
     }
 
@@ -97,7 +99,7 @@ public class KonfirmasiActivity extends AppCompatActivity implements TimePickerD
 
     @Override
     public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute, int second) {
-        String time = hourOfDay + ":" + minute + ":" + second;
+        String time = hourOfDay + ":" + minute;
         clockValue.setText(time);
     }
 }

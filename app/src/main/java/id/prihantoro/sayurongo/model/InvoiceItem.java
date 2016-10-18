@@ -1,9 +1,11 @@
 package id.prihantoro.sayurongo.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Wahyu Prihantoro on 20-Sep-16.
  */
-public class InvoiceItem {
+public class InvoiceItem  implements Serializable{
     public String nama;
     public int harga;
     public int jumlah;

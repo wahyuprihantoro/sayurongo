@@ -14,6 +14,7 @@ import org.androidannotations.annotations.ViewById;
 
 import id.prihantoro.sayurongo.R;
 import id.prihantoro.sayurongo.model.DaganganItem;
+import id.prihantoro.sayurongo.model.InvoiceItem;
 
 /**
  * Created by Wahyu Prihantoro on 20-Sep-16.
@@ -48,6 +49,13 @@ public class DaganganItemView extends RelativeLayout {
     public DaganganItemView(Context context, AttributeSet attrs, int defStyleAttr, DaganganItem item) {
         super(context, attrs, defStyleAttr);
         this.item = item;
+    }
+
+    public InvoiceItem getInvoice() {
+        int harga = Integer.parseInt(item.harga.substring(0, item.harga.length() - 3));
+        InvoiceItem invoiceItem = new InvoiceItem(item.nama, harga, 0);
+        invoiceItem.jumlah = Integer.parseInt(value.getText().toString());
+        return invoiceItem;
     }
 
     @AfterViews
