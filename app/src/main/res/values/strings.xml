@@ -6,5 +6,253 @@
         <item>Pembeli</item>
         <item>Penjual</item>
     </string-array>
+    <string-array name="buah">
+        <item>Anggur</item>
+        <item>Apel</item>
+        <item>Aprikot</item>
+        <item>Apokat</item>
+        <item>Asam</item>
+        <item>Atap</item>
+        <item>Arbei</item>
+        <item>Abiu</item>
+        <item>Bacang</item>
+        <item>Baguk</item>
+        <item>Belimbing</item>
+        <item>Belimbing sayur</item>
+        <item>Benda</item>
+        <item>Binjai</item>
+        <item>Bisbul</item>
+        <item>Blueberry</item>
+        <item>Burahol</item>
+        <item>Blewah</item>
+        <item>Bit</item>
+        <item>Cempedak</item>
+        <item>Ceplukan</item>
+        <item>Cermai</item>
+        <item>Ceri</item>
+        <item>Cokelat</item>
+        <item>Delima</item>
+        <item>Duku</item>
+        <item>Durian</item>
+        <item>Duwet</item>
+        <item>Enau</item>
+        <item>Enam-enam</item>
+        <item>Frambos</item>
+        <item>Gandaria</item>
+        <item>Gowok</item>
+        <item>Gandum</item>
+        <item>Hamoi</item>
+        <item>Hamlam</item>
+        <item>Holdi</item>
+        <item>Jamblang</item>
+        <item>Jambu air</item>
+        <item>Jambu batu</item>
+        <item>Jambu bol</item>
+        <item>Jambu mawar</item>
+        <item>Jambu mede</item>
+        <item>Jambu semarang</item>
+        <item>Jengkol</item>
+        <item>Jeruk</item>
+        <item>Jeruk bali</item>
+        <item>Jeruk besar</item>
+        <item>Jeruk keprok</item>
+        <item>Jeruk kingkit</item>
+        <item>Jeruk nipis</item>
+        <item>Jeruk purut</item>
+        <item>Jambu neker</item>
+        <item>Kapulasan</item>
+        <item>Kawista</item>
+        <item>Kecapi</item>
+        <item>Kedondong</item>
+        <item>Kelapa</item>
+        <item>Kelengkeng</item>
+        <item>kelubi</item>
+        <item>ketela</item>
+        <item>Kemang</item>
+        <item>Kepel</item>
+        <item>Kersen</item>
+        <item>Kesemek</item>
+        <item>Kiwi</item>
+        <item>Kokosan</item>
+        <item>Koldi</item>
+        <item>Kurma</item>
+        <item>Kelawi</item>
+        <item>Lai</item>
+        <item>Langsat</item>
+        <item>Lemon</item>
+        <item>Lengkeng</item>
+        <item>Leci</item>
+        <item>Lobak</item>
+        <item>Maja</item>
+        <item>Malaka</item>
+        <item>Mangga</item>
+        <item>Mangga lalijiwa</item>
+        <item>Mangga pari</item>
+        <item>Manggis</item>
+        <item>Markisa</item>
+        <item>Matoa</item>
+        <item>Melon</item>
+        <item>Mengkudu</item>
+        <item>Menteng</item>
+        <item>Namnam</item>
+        <item>Nanas</item>
+        <item>Nangka</item>
+        <item>Naga</item>
+        <item>Nona</item>
+        <item>Pamelo</item>
+        <item>Pepaya</item>
+        <item>Persik</item>
+        <item>Pir</item>
+        <item>Pisang</item>
+        <item>Pete</item>
+        <item>Rambai</item>
+        <item>Rambusa</item>
+        <item>Rambutan</item>
+        <item>Rukem</item>
+        <item>Salak</item>
+        <item>Sawo duren</item>
+        <item>Sawo kecik</item>
+        <item>Sawo manila</item>
+        <item>Semangka</item>
+        <item>Sirsak</item>
+        <item>Siwalan</item>
+        <item>Srikaya</item>
+        <item>Stroberi</item>
+        <item>Sukun</item>
+        <item>Terap</item>
+        <item>Terong</item>
+        <item>Timun</item>
+        <item>Tomat</item>
+        <item>Ubi</item>
+        <item>Waluh</item>
+        <item>Wuni</item>
+        <item>Zaitun</item>
+    </string-array>
+    <string-array name="sayur">
+        <item>Asparagus</item>
+        <item>Asam Jawa</item>
+        <item>Bayam</item>
+        <item>Bendi</item>
+        <item>Buncis</item>
+        <item>Brokoli</item>
+        <item>Cabai</item>
+        <item>Daun bawang</item>
+        <item>Daun singkong</item>
+        <item>Jagung</item>
+        <item>Jamur</item>
+        <item>Kacang bogor</item>
+        <item>Kacang buncis</item>
+        <item>Kacang kelisa</item>
+        <item>Kacang panjang</item>
+        <item>Kacang tanah</item>
+        <item>kacang merah</item>
+        <item>Kailan</item>
+        <item>Kangkung</item>
+        <item>Kecambah</item>
+        <item>Kecipir</item>
+        <item>Keledek</item>
+        <item>Kentang</item>
+        <item>Kubis bunga</item>
+        <item>Kubis</item>
+        <item>Kucai</item>
+        <item>Labu air</item>
+        <item>Labu manis</item>
+        <item>Lada</item>
+        <item>Lobak</item>
+        <item>Lobak merah</item>
+        <item>labu siam</item>
+        <item>lembayung</item>
+        <item>Pegaga</item>
+        <item>Peria</item>
+        <item>Petola</item>
+        <item>Pucuk paku</item>
+        <item>Paprika</item>
+        <item>Selada</item>
+        <item>Sawi</item>
+        <item>Sengkuang</item>
+        <item>Serai</item>
+        <item>Terung</item>
+        <item>Timun</item>
+        <item>Tomat</item>
+        <item>Wortel</item>
+    </string-array>
+    <string-array name="bumbu_masak">
+        <item>Asam jawa</item>
+        <item>Bawang bombay</item>
+        <item>Bawang merah</item>
+        <item>Bawang putih</item>
+        <item>Bumbu Ayam Goreng Sasa</item>
+        <item>Bumbu Nasi Goreng Sasa</item>
+        <item>Bumbu Rendang Masako</item>
+        <item>Cabai atau Cabe</item>
+        <item>Cengkeh</item>
+        <item>Daun bawang</item>
+        <item>Daun pandan</item>
+        <item>Daun salam</item>
+        <item>Daun seledri</item>
+        <item>Garam halus</item>
+        <item>Jahe</item>
+        <item>Jeruk purut</item>
+        <item>Jeruk limo / limau</item>
+        <item>Jintan</item>
+        <item>Kapulaga</item>
+        <item>Kayu manis</item>
+        <item>Kecap Bango Sachet</item>
+        <item>Kecap Manis ABC</item>
+        <item>Kemiri</item>
+        <item>Kencur</item>
+        <item>Ketumbar</item>
+        <item>Kunir atau Kunyit</item>
+        <item>Lada bubuk La Rasa</item>
+        <item>Lada hitam</item>
+        <item>Lengkuas atau Laos</item>
+        <item>Masako Ayam</item>
+        <item>Masako Sapi</item>
+        <item>Pala</item>
+        <item>Royco Sapi Sachet</item>
+        <item>Saos Tiram Royco</item>
+        <item>Sasa Kaldu Ayam</item>
+        <item>Sasa Kaldu Sapi</item>
+        <item>Selasih</item>
+        <item>Serai</item>
+        <item>Tabasco</item>
+        <item>Temu kunci</item>
+        <item>Wijen</item>
+    </string-array>
+    <string-array name="makanan_laut">
+        <item>Bandeng</item>
+        <item>Baronang</item>
+        <item>Cakalang</item>
+        <item>Cumi Basah</item>
+        <item>Cumi Kering</item>
+        <item>Kakap</item>
+        <item>Kembung</item>
+        <item>Kod</item>
+        <item>Kuwe</item>
+        <item>Layang</item>
+        <item>Layur</item>
+        <item>Lele</item>
+        <item>Salmon atau salem</item>
+        <item>Sarden</item>
+        <item>Selar</item>
+        <item>Tenggiri</item>
+        <item>Teri</item>
+        <item>Tongkol</item>
+        <item>Tuna</item>
+        <item>Udang besar</item>
+        <item>Udang kecil</item>
+    </string-array>
+    <string-array name="daging">
+        <item>Daging sapi</item>
+        <item>Ayam jantan boiler</item>
+        <item>Ayam jantan kampung</item>
+    </string-array>
+    <string-array name="makanan_olahan">
+        <item>Nugget ABC</item>
+        <item>Nugget BCD</item>
+        <item>Otak-otak Ikan Super</item>
+        <item>Sosis A</item>
+        <item>Sosis B</item>
+    </string-array>
     <string name="title_activity_maps">Map</string>
 </resources>
