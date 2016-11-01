@@ -51,13 +51,13 @@
                                 android:layout_height="30dp"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginRight="15dp"
-                                android:src="@drawable/pp" />
+                                android:src="@drawable/alifia_nisa" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:text="Kucing Terbang"
+                                android:text="Alifia Nisa"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -77,7 +77,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:text="(650)555-3211"
+                                android:text="(0812)80067949"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -97,7 +97,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:text="Jalan Rawa Jaya II"
+                                android:text="Jalan Pondok Lakah Permai"
                                 android:textColor="#000" />
                         </LinearLayout>
                     </LinearLayout>
@@ -244,13 +244,13 @@
                                 android:layout_height="30dp"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginRight="15dp"
-                                android:src="@drawable/pp" />
+                                android:src="@drawable/tomi_pratomo" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:text="Kucing Terbang"
+                                android:text="Tomi Pratomo"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -270,7 +270,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:text="(650)555-3211"
+                                android:text="(0812)81167922"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -290,7 +290,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:text="Jalan Rawa Jaya II"
+                                android:text="Jalan Japos Ciledug"
                                 android:textColor="#000" />
                         </LinearLayout>
                     </LinearLayout>

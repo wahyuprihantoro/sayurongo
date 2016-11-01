@@ -40,7 +40,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/pp" />
+                        android:src="@drawable/tomi_pratomo" />
 
                     <ImageView
                         android:layout_width="30dp"
@@ -60,7 +60,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ayu Sukmasari"
+                        android:text="Tono Susanto"
                         android:textColor="#000"
                         android:textSize="15sp" />
 
@@ -68,7 +68,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="(0812)5550-1234"
+                        android:text="(0817)26257282"
                         android:textColor="#000"
                         android:textSize="15sp" />
 

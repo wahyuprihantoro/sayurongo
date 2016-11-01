@@ -29,9 +29,9 @@
             android:padding="16dp">
 
             <LinearLayout
-                android:layout_above="@+id/bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_above="@+id/bottom"
                 android:background="#f7f7f7"
                 android:orientation="vertical">
 
@@ -57,46 +57,109 @@
                         android:paddingLeft="10dp">
 
                         <TextView
+                            android:id="@+id/ask7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bagaimana cara memesan sayur menggunakan aplikasi?"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/ans7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pada peta yang berada di home Anda, pilih tukang sayur terdekat yang diinginkan dengan men tap pada simbolnya. Kemudian pada halaman ‘PROFIL PENJUAL’, Anda dapat melihat profil penjual sayur beserta list dagangan yang dijualnya pada hari ini. Jika sesuai dengan yang Anda cari, tap pada tombol tambah untuk menambah dan kurang untuk mengurangi jumlah yang ingin dibeli. Jika sudah selesai, tap pada tombol LANJUTKAN. Pada halaman KONFIRMASI, Anda dapat melihat total belanja beserta pilihan belanja—diantar atau beli langsung—. Jika sesuai, tap tombol PROSES. Selanjutnya, apabila Anda memilih opsi beli langsung maka Anda dapat langsung menemui penjual sayur tersebut. Jika Anda memilih opsi diantar, maka Anda dapat menunggu telepon atau pesan singkat dari penjual terkait mekanisme berbelanja."
+                            android:textSize="15sp" />
+
+                        <TextView
                             android:id="@+id/ask1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bagaimana cara melakukan pembelian?"
+                            android:text="Bagaimana cara mengganti bahasa yang digunakan?"
                             android:textColor="#000"
                             android:textSize="15sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper faucibus vestibulum. Duis felis lacus, bibendum ut ultricies sed, vehicula at elit. Integer cursus nulla eu ex pulvinar, vitae ultricies enim interdum."
+                            android:text="Tap pada tombol menu yang terletak pada sebelah kiri atas header hingga sidebar menu muncul. Kemudian pilih ‘Pengaturan’, setelah  itu pilih opsi ’Bahasa’. Selanjutnya klik pada bahasa yang ingin digunakan."
                             android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/ask2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bagaimana cara mendaftar?"
+                            android:text="Bagaimana cara mengubah profil saya?"
                             android:textColor="#000"
                             android:textSize="15sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Curabitur sit amet convallis purus, ut ultrices turpis. Praesent dictum nulla eu odio bibendum, et tempor metus pretium. Maecenas blandit et est et efficitur. Cras nibh dolor, semper nec neque nec, hendrerit malesuada mauris. Praesent pellentesque vitae libero sit amet lobortis."
+                            android:text="Tap pada tombol menu yang terletak pada sebelah kiri atas header hingga sidebar menu muncul. Selanjutnya tap pada ikon edit atau pensil yang terletak di sebelah kiri foto profil Anda. Setelah muncul halaman UBAH PROFIL, isi data yang ingin Anda ubah. Simpan data dengan men tap tombol ceklist."
                             android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/ask3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bagaimana cara mengubah profil?"
+                            android:text="Bagaimana cara mengisi ‘List Dagangan’ harian?"
                             android:textColor="#000"
                             android:textSize="15sp" />
 
                         <TextView
+                            android:id="@+id/ans3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Praesent maximus tellus at feugiat ultricies. Nullam suscipit urna nec egestas varius. In sapien ipsum, bibendum eget purus eu, euismod sodales purus."
+                            android:text="Tap pada tombol menu yang terletak pada sebelah kiri atas header hingga sidebar menu muncul. Pilih menu ‘Dagangan’, selanjutnya pada halaman DAGANGAN, isi list dagangan harian Anda dengan tap pada ikon tambah. Kemudian akan muncul 5 box informasi dagangan—terdiri dari jenis (sayur, buah, daging, ikan, dan bumbu), nama (nama jenis seperti ikan bandeng dsb), harga, satuan penjualan, serta jumlah dagangan yang dijual ke pembeli— yang dapat Anda isi sesuai keinginan. Apabila Anda ingin menghapus dagangan Anda, maka Anda dapat men tap tombol silang yang terletak paling kiri pada masing-masing baris isi dagangan. Jika sudah selesai mengisi list dagangan harian, simpan data dengan men tap tombol ceklist yang terletak di paling bawah halaman."
                             android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/ask4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bagaimana cara mengetahui lokasi pembeli dan penjual sayur lainnya?"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/ans4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pada peta yang tampil di home Anda, lokasi Anda ditunjukan dengan pin berwarna merah. Sedangkan, pengguna lainnya ditunjukan melalui simbol dengan warna berbeda. Warna jingga menunjukan lokasi penjual sayur lainnya dan warna hijau menunjukan lokasi pembeli. Sebagai penjual, Anda dapat mengetahui profil dan isi dagangan penjual sayur lainnya dengan men tap simbol pengguna berwarna jingga."
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/ask5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bagaimana cara mengetahui pesanan belanja sayur yang masuk?"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/ans5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tap pada tombol menu yang terletak pada sebelah kiri atas header hingga sidebar menu muncul. Pilih menu ‘Pesanan’, selanjutnya pada halaman PESANAN akan ditampilkan pesanan dari pembeli yang masuk per tanggal, lengkap dengan rincian belanja serta profil pembeli. Sebagai penjual, Anda dapat menerima pesanan dengan menekan tombol ceklist atau menolak pesanan dengan menekan tombol silang."
+                            android:textSize="15sp" />
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/ask6"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="Bagaimana cara mencari penjual sayur di lokasi tertentu?"-->
+                            <!--android:textColor="#000"-->
+                            <!--android:textSize="15sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/ans6"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="Tap pada simbol cari yang terletak pada header, hingga muncul box yang dapat Anda isi dengan alamat yang Anda inginkan. Setelah itu, akan muncul lokasi penjual sayur terdekat dengan lokasi yang dituju."-->
+                            <!--android:textSize="15sp" />-->
+
+
                     </LinearLayout>
                 </ScrollView>
 

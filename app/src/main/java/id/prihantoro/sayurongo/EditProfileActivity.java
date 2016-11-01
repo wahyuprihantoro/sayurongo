@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 
 import com.theartofdev.edmodo.cropper.CropImage;
@@ -55,6 +56,10 @@ public class EditProfileActivity extends AppCompatActivity {
     EditText password;
     @ViewById
     ImageView image;
+    @ViewById
+    RadioButton pembeli;
+    @ViewById
+    RadioButton penjual;
 
     private long id;
     private User user;
@@ -90,6 +95,15 @@ public class EditProfileActivity extends AppCompatActivity {
                 image.setImageBitmap(decodeBase64(user.photo));
             }
         }
+        if (UserData.getInstance().isSeller(this)){
+            penjual.setChecked(true);
+            pembeli.setChecked(false);
+        } else {
+            pembeli.setChecked(true);
+            penjual.setChecked(false);
+        }
+        pembeli.setEnabled(false);
+        penjual.setEnabled(false);
     }
 
     @Override

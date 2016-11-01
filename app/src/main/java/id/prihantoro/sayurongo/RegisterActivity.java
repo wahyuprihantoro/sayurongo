@@ -14,6 +14,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -57,6 +59,12 @@ public class RegisterActivity extends AppCompatActivity implements FragmentDrawe
     EditText password;
     @ViewById
     CircleImageView image;
+    @ViewById
+    RadioButton pembeli;
+    @ViewById
+    RadioButton penjual;
+    @ViewById
+    RadioGroup radioGroup;
 
     private Bitmap currentBitmap;
     private String currentPhotoBase64;
@@ -86,7 +94,14 @@ public class RegisterActivity extends AppCompatActivity implements FragmentDrawe
         String phone = this.phone.getText().toString();
         String password = this.password.getText().toString();
         User user;
-        if (spinner.getSelectedItem().toString().equals("Pembeli")) {
+//        if (spinner.getSelectedItem().toString().equals("Pembeli")) {
+//            user = new User(nama, currentPhotoBase64, phone, false, password);
+//            userData.setRole(getApplicationContext(), UserData.BUYER);
+//        } else {
+//            user = new User(nama, currentPhotoBase64, phone, true, password);
+//            userData.setRole(getApplicationContext(), UserData.SELLER);
+//        }
+        if (radioGroup.getCheckedRadioButtonId() == pembeli.getId()) {
             user = new User(nama, currentPhotoBase64, phone, false, password);
             userData.setRole(getApplicationContext(), UserData.BUYER);
         } else {

@@ -32,13 +32,13 @@
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="15dp"
-                    android:src="@drawable/pp" />
+                    android:src="@drawable/dina_amalia" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="Kucing Terbang"
+                    android:text="Dina Amalia"
                     android:textColor="#000" />
             </LinearLayout>
 
@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="(650)555-3211"
+                    android:text="(0819)26728911"
                     android:textColor="#000" />
             </LinearLayout>
 
@@ -78,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="Jalan Rawa Jaya II"
+                    android:text="Jalan Sinar Jaya"
                     android:textColor="#000" />
             </LinearLayout>
         </LinearLayout>

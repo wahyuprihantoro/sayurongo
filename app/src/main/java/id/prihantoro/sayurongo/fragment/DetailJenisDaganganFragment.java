@@ -78,7 +78,5 @@ public class DetailJenisDaganganFragment extends Fragment {
 
     @Click
     void linearLayout() {
-
     }
-
 }

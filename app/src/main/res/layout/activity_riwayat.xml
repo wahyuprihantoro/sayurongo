@@ -62,14 +62,44 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_gravity="center_vertical"
-                                    android:src="@drawable/pp" />
+                                    android:src="@drawable/dina_amalia" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Kucing Terbang"
+                                    android:text="Dina Amalia"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="Rp15000"
+                                    android:textColor="#000" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/dito_prabowo" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="Dito Prabowo"
                                     android:textColor="#000" />
 
                                 <TextView
@@ -92,14 +122,14 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_gravity="center_vertical"
-                                    android:src="@drawable/pp" />
+                                    android:src="@drawable/joy_lee" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Kucing Terbang"
+                                    android:text="Joy Lee"
                                     android:textColor="#000" />
 
                                 <TextView
@@ -107,37 +137,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Rp30000"
-                                    android:textColor="#000" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:orientation="horizontal">
-
-                                <de.hdodenhof.circleimageview.CircleImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_gravity="center_vertical"
-                                    android:src="@drawable/pp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
-                                    android:text="Kucing Terbang"
-                                    android:textColor="#000" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
-                                    android:text="Rp30000"
+                                    android:text="Rp45000"
                                     android:textColor="#000" />
 
                             </LinearLayout>
@@ -152,14 +152,14 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_gravity="center_vertical"
-                                    android:src="@drawable/pp" />
+                                    android:src="@drawable/tika_sri_fatma" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Kucing Terbang"
+                                    android:text="Tika Sri Fatima"
                                     android:textColor="#000" />
 
                                 <TextView
@@ -167,7 +167,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Rp30000"
+                                    android:text="Rp10000"
                                     android:textColor="#000" />
 
                             </LinearLayout>
@@ -201,14 +201,14 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_gravity="center_vertical"
-                                    android:src="@drawable/pp" />
+                                    android:src="@drawable/isaac_h" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Kucing Terbang"
+                                    android:text="Issac Herrera"
                                     android:textColor="#000" />
 
                                 <TextView
@@ -216,37 +216,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Rp30000"
-                                    android:textColor="#000" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:orientation="horizontal">
-
-                                <de.hdodenhof.circleimageview.CircleImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_gravity="center_vertical"
-                                    android:src="@drawable/pp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
-                                    android:text="Kucing Terbang"
-                                    android:textColor="#000" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
-                                    android:text="Rp30000"
+                                    android:text="Rp20000"
                                     android:textColor="#000" />
 
                             </LinearLayout>
@@ -261,14 +231,14 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_gravity="center_vertical"
-                                    android:src="@drawable/pp" />
+                                    android:src="@drawable/brent_s" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Kucing Terbang"
+                                    android:text="Brent Simons"
                                     android:textColor="#000" />
 
                                 <TextView
@@ -276,7 +246,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Rp30000"
+                                    android:text="Rp14000"
                                     android:textColor="#000" />
 
                             </LinearLayout>
@@ -291,14 +261,14 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_gravity="center_vertical"
-                                    android:src="@drawable/pp" />
+                                    android:src="@drawable/sarah_diar" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Kucing Terbang"
+                                    android:text="Sarah Diar"
                                     android:textColor="#000" />
 
                                 <TextView
@@ -306,7 +276,37 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Rp30000"
+                                    android:text="Rp16000"
+                                    android:textColor="#000" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ghina_ayu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="Ghina Ayu"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="Rp21000"
                                     android:textColor="#000" />
 
                             </LinearLayout>
@@ -341,7 +341,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="20dp"
-                        android:text="Rp 162000"
+                        android:text="Rp 171000"
                         android:textColor="#fff"
                         android:textSize="20sp"
                         android:textStyle="bold" />

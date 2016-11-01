@@ -5,8 +5,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.google.android.gms.vision.text.Line;
-
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
@@ -24,7 +22,7 @@ public class RateSellerActivity extends AppCompatActivity {
     LinearLayout down;
 
     @AfterViews
-    void init(){
+    void init() {
         getSupportActionBar().setTitle("RATE PEDAGANG");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         down.setVisibility(View.GONE);
@@ -32,23 +30,40 @@ public class RateSellerActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId()==android.R.id.home){
+        if (item.getItemId() == android.R.id.home) {
             finish();
         }
         return super.onOptionsItemSelected(item);
     }
 
     @Click
-    void like(){
+    void like() {
         up.setVisibility(View.VISIBLE);
         down.setVisibility(View.GONE);
+        MainActivity_.intent(this).start();
         finish();
     }
 
     @Click
-    void dislike(){
+    void dislike() {
         down.setVisibility(View.VISIBLE);
         up.setVisibility(View.GONE);
+        MainActivity_.intent(this).start();
+        finish();
+    }
+    @Click
+    void like1() {
+        up.setVisibility(View.VISIBLE);
+        down.setVisibility(View.GONE);
+        MainActivity_.intent(this).start();
+        finish();
+    }
+
+    @Click
+    void dislike1() {
+        down.setVisibility(View.VISIBLE);
+        up.setVisibility(View.GONE);
+        MainActivity_.intent(this).start();
         finish();
     }
 }

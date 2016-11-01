@@ -39,7 +39,20 @@ public class BantuanActivity extends AppCompatActivity implements FragmentDrawer
     TextView ask2;
     @ViewById
     TextView ask3;
-
+    @ViewById
+    TextView ask4;
+    @ViewById
+    TextView ask5;
+    @ViewById
+    TextView ask7;
+    @ViewById
+    TextView ans3;
+    @ViewById
+    TextView ans4;
+    @ViewById
+    TextView ans5;
+    @ViewById
+    TextView ans7;
     private FragmentDrawer drawerFragment;
 
     @AfterViews
@@ -54,6 +67,9 @@ public class BantuanActivity extends AppCompatActivity implements FragmentDrawer
         underline(ask1);
         underline(ask2);
         underline(ask3);
+        underline(ask4);
+        underline(ask5);
+        underline(ask7);
     }
 
     public void underline(TextView view){

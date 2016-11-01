@@ -83,12 +83,34 @@
                 android:layout_height="wrap_content"
                 android:text="Peran*" />
 
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/peran">
+
+                <RadioButton
+                    android:id="@+id/pembeli"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pembeli" />
+
+                <RadioButton
+                    android:id="@+id/penjual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penjual" />
+            </RadioGroup>
+
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_toRightOf="@+id/peran" />
+                android:layout_toRightOf="@+id/peran"
+                android:visibility="gone" />
         </RelativeLayout>
 
         <Button
